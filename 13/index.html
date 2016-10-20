@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IFE JavaScript Task 01</title>
+</head>
+<body>
+    <lable>请输入北京今天的空气质量：<input id="aqi-input" type="text"></lable>
+    <button id="button">确认填写</button>
+    <div>您输入的值是：<span id="aqi-display">尚无输入</span></div>
+    <script type="text/javascript">
+        (function () {
+            var $ =function(id){
+                return document.getElementById(id);
+            }
+            var handler=function () {
+                var num=parseInt($("aqi-input").value);
+                if((!isNaN(num))&&(num>=0)&&(num<=1000)){
+                    $("aqi-display").innerHTML=num;
+                }
+                else{
+                    alert($("aqi-input").value + "不是有效值，请在0~1000之间选择");
+                }
+            }
+            $("button").onclick=function () {
+                handler();
+            }
+
+        })();
+    </script>
+</body>
+</html>
