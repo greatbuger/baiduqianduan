@@ -1,2 +1,2 @@
 # baiduqianduan
-15题，![](15/images/1.png)
+15题，![效果](baiduqianduan/15/images/1.png)
